@@ -149,7 +149,9 @@ Siga os contratos e rotas a risca, iremos fazer a avaliação de forma automatiz
         - **Response**: 204
     - `POST /api/vehicles/{id}/file`
         - **Description**: Adiciona um novo arquivo para o veículo. Requer role de admin
-        - Junior
+          <details>
+              <summary>Junior</summary>
+    
             
             O arquivo deve ser salvo no disco local, Amazon S3, MinIO ou outros.
             
@@ -182,8 +184,9 @@ Siga os contratos e rotas a risca, iremos fazer a avaliação de forma automatiz
                       }
                 }
                 ```
-                
-        - Pleno/Senior
+          </details>
+          <details>
+            <summary>Pleno/Senior</summary>
             - **Payload**:
                 
                 ```json
@@ -212,10 +215,12 @@ Siga os contratos e rotas a risca, iremos fazer a avaliação de forma automatiz
                 - Não pode ser utilizado o banco de dados ou disco local
             - Queue
                 - Algum serviço de mensageria da sua escolha: RabbitMQ, Kafka, SNS e etc
+          </details>
     - `GET /api/vehicles/{id}/file`
         - **Description**: Lista todos os arquivos do veículo. Requer role de leitura.
         - **Response**: 200
-        - Junior
+          <details>
+              <summary>Junior</summary>
             
             ```json
             {
@@ -239,9 +244,10 @@ Siga os contratos e rotas a risca, iremos fazer a avaliação de forma automatiz
             	}]
             }
             ```
-            
-        - Pleno/Senior
-            
+          </details>
+          <details>
+              <summary>Pleno/Senior</summary>
+              
             ```json
             {
             	"errors": [],
@@ -262,6 +268,7 @@ Siga os contratos e rotas a risca, iremos fazer a avaliação de forma automatiz
             	}]
             }
             ```
+          </details>
             
 
 Colocar as strings de mensagens de erros amigaveis quando acontecer na propriedade `errors`.
