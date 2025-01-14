@@ -203,23 +203,8 @@ Siga os contratos e rotas a risca, iremos fazer a avaliação de forma automatiz
                 }
                 ```
                 
-            
-            ```css
-            participant Cliente
-            participant Aplicacao
-            participant Queue
-            participant Storage
-            
-            Cliente->Aplicacao:Post request com as informações do arquivo
-            Cliente<-Aplicacao:Retorna link de upload para o arquivo
-            Cliente->Storage:PUT:Upload do arquivo
-            note over Aplicacao,Storage:Fluxo assincrono
-            Storage-->Queue:Notificação de upload do arquivo
-            Queue-->Aplicacao:Consumo da notificação e salva no DB
-            ```
-            
-            ![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/071e42cb-5911-46ec-8bc3-051fd1ee903f/098742a9-1f3c-4402-96ce-d8793641eada/image.png)
-            
+            ![image](https://github.com/user-attachments/assets/3785cd86-9ba9-4756-a265-2a5993cc4071)
+
             > Caso tenha algum código aplicado fora do repo: explique como foi implementado dentro do [readme.md](http://readme.md)
             > 
             - Storage
